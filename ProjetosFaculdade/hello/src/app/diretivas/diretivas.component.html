@@ -1,0 +1,20 @@
+<p>
+  Diretivas
+</p>
+
+<div *ngIf="nomes.length == 0">
+  <p>O programa não possui cadastros.</p>
+</div>
+
+<div *ngIf="nomes.length > 0">
+  <p>Lista de nomes:</p>
+  <ul>
+    <li *ngFor="let nome of nomes, let i = index">
+      <span [class.cor-fundo]="i%2==0">{{i}} - {{nome}}</span>
+    </li>
+  </ul>
+</div>
+
+<!-- <div *ngIf="true">
+  <p>Opa é verdade</p>
+</div> -->

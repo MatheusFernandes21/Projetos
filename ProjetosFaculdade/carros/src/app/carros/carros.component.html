@@ -1,0 +1,11 @@
+<h2> Lista de Carros </h2>
+
+<ul>
+    <li *ngFor="let carro of carros" (click)="onselect(carro)">
+      <span>{{carro.id}}</span>
+      <span>{{carro.nome}}</span>
+      <span>{{carro.marca}}</span>
+    </li>
+</ul>
+
+<app-carro-detalhe [carro]="selectcarro"></app-carro-detalhe>

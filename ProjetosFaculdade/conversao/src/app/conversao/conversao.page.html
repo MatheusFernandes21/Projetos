@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Conversão.</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h1>O dólar tá caro.</h1>
+<ion-item>
+  <ion-label position="stacked">Valor(R$)</ion-label>
+  <ion-input #inputvalor type="number"></ion-input>
+</ion-item>
+
+<!-- Radio -->
+<ion-list>
+  <ion-radio-group>
+    <ion-list-header>
+      <ion-label>Moeda</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Dólar</ion-label>
+      <ion-radio slot="start" value="1" (ionSelect)="conversao(1, inputvalor.value)"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Euro</ion-label>
+      <ion-radio slot="start" value="2" (ionSelect)="conversao(2, inputvalor.value)"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bitcoin</ion-label>
+      <ion-radio slot="start" value="3" (ionSelect)="conversao(3, inputvalor.value)"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
+
+<!-- Alert -->
+<div class="ion-text-center">
+  <ion-button (click)="presentAlert()">Calcular</ion-button>
+</div>
+
+</ion-content>

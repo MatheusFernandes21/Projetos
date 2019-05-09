@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Exemplo 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h1>Qual é melhor?</h1>
+<ion-item>
+  <ion-label position="stacked">Gasolina(R$)</ion-label>
+  <ion-input #inputgasolina type="number"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Etanol(R$)</ion-label>
+  <ion-input #inputetanol type="number"></ion-input>
+</ion-item>
+
+<div class="ion-text-center">
+  <ion-button (click)="calcular(inputgasolina.value, inputetanol.value)">Calcular</ion-button>
+</div>
+
+<div class="ion-text-center">
+  <p>O melhor é: {{resultado}}</p>
+</div>
+</ion-content>
